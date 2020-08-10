@@ -3,7 +3,7 @@ const httpProxy = require('http-proxy')
 const express = require('express')
 const request = require('request')
 const httpsrv = require('httpsrv')
-const fs = require('fs')
+// const fs = require('fs')
 const SECRET = ${process.env.ARIA2C_SECRET}
 const ENCODED_SECRET = Buffer.from(SECRET).toString('base64')
 
