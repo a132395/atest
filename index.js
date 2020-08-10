@@ -11,10 +11,10 @@ const {CookieJar} = require('tough-cookie');
 const http = require('http');
 const httpProxy = require('http-proxy');
 const request = require('request');
-const client = new Client({
-    connectionString: process.env.DATABASE_URL,
-    ssl: { rejectUnauthorized: false },
-});
+// const client = new Client({
+//     connectionString: process.env.DATABASE_URL,
+//     ssl: { rejectUnauthorized: false },
+// });
 
 const proxy = httpProxy.createProxyServer({
 	target: 'ws://localhost:6800',
