@@ -352,9 +352,9 @@ server.listen(PORT, () => console.log(`Listening on http://localhost:${PORT}`));
 //     await checkNewPost();
 // }
 
-main().catch((err)=>{
-    console.log(err);
-    client.end().then(()=>{
-        process.exit(1);
-    })
-});
+// main().catch((err)=>{
+//     console.log(err);
+//     client.end().then(()=>{
+//         process.exit(1);
+//     })
+// });
