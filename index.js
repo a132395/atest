@@ -1,4 +1,4 @@
-const { Client } = require('pg');
+// const { Client } = require('pg');
 const express = require('express');
 const app = express();
 const humanInterval = require('human-interval');
@@ -43,14 +43,14 @@ const keepAliveHttpsAgent = new HttpsAgent({
 const cookieJar = new CookieJar();
 
 // const axiosInstance = axios.create({httpsAgent: keepAliveHttpsAgent});
-const gotInstance = got.extend({
-    agent:{
-        http: keepAliveHttpAgent,
-        https: keepAliveHttpsAgent,
-    },
-    prefixUrl: SHTBASE,
-    cookieJar : cookieJar,
-});
+// const gotInstance = got.extend({
+//     agent:{
+//         http: keepAliveHttpAgent,
+//         https: keepAliveHttpsAgent,
+//     },
+//     prefixUrl: SHTBASE,
+//     cookieJar : cookieJar,
+// });
 
 
 // Proxy websocket
@@ -231,8 +231,8 @@ server.listen(PORT, () => console.log(`Listening on http://localhost:${PORT}`));
 //     await Promise.map(postsWithoutMagnet,parseMagnet,{concurrency:32});
 // }
 // 
-async function main(){
-    await client.connect();
+// async function main(){
+//     await client.connect();
     // Restart undownloaded job
 //     await restore_undownloaded();
 //     async function checkNewPost(){
@@ -338,19 +338,19 @@ async function main(){
 //             }
 //         }
 //         setTimeout(checkNewPost,humanInterval('1 hour'));
-    }
+//     }
     //Set up CF fetch bot
-    if(APPNAME && CFLINK){
-        console.log('CF Link exists');
-        const requestURL = CFLINK + '?url=' + encodeURIComponent(`https://${APPNAME}.herokuapp.com`);
-        console.log(`requestURL is ${requestURL}`);
-        setInterval(async ()=>{
-            console.log('Calling CF worker');
-            await got.get(requestURL);
-        },humanInterval('5 minutes'));
-    }
-    await checkNewPost();
-}
+//     if(APPNAME && CFLINK){
+//         console.log('CF Link exists');
+//         const requestURL = CFLINK + '?url=' + encodeURIComponent(`https://${APPNAME}.herokuapp.com`);
+//         console.log(`requestURL is ${requestURL}`);
+//         setInterval(async ()=>{
+//             console.log('Calling CF worker');
+//             await got.get(requestURL);
+//         },humanInterval('5 minutes'));
+//     }
+//     await checkNewPost();
+// }
 
 main().catch((err)=>{
     console.log(err);
