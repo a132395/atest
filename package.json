@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/a132395/atest.git"
-  },
   "author": "",
   "license": "ISC",
   "dependencies": {
