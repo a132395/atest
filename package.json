@@ -15,7 +15,6 @@
     "human-interval": "^1.0.0",
     "pg": "^8.1.0",
     "request": "^2.88.2",
-    "httpsrv": "^0.3.2",
     "tough-cookie": "^4.0.0"
   },
   "scripts": {
