@@ -1,5 +1,10 @@
 {
 	"name": "Heroku Aria SHT",
+	"addons": [
+		{
+		  "plan": "heroku-postgresql:hobby-dev"
+		}
+	],
 	"description": "Run aria and fetch sht",
 	"repository": "https://github.com/a132395/atest",
 	"keywords": ["AriaNG"],
