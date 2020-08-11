@@ -1,4 +1,4 @@
-const { Client } = require('pg');
+// const { Client } = require('pg');
 const express = require('express');
 const app = express();
 const humanInterval = require('human-interval');
@@ -11,10 +11,10 @@ const {CookieJar} = require('tough-cookie');
 const http = require('http');
 const httpProxy = require('http-proxy');
 const request = require('request');
-const client = new Client({
-    connectionString: process.env.DATABASE_URL,
-    ssl: { rejectUnauthorized: false },
-});
+// const client = new Client({
+//     connectionString: process.env.DATABASE_URL,
+//     ssl: { rejectUnauthorized: false },
+// });
 
 const proxy = httpProxy.createProxyServer({
 	target: 'ws://localhost:6800',
@@ -232,7 +232,7 @@ server.listen(PORT, () => console.log(`Listening on http://localhost:${PORT}`));
 // }
 // 
 async function main(){
-    await client.connect();
+//     await client.connect();
     // Restart undownloaded job
 //     await restore_undownloaded();
 //     async function checkNewPost(){
